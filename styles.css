@@ -1,0 +1,144 @@
+:root {
+  --color-primary: #1a1820;
+  --color-secondary: #e7641a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: var(--color-primary);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+.header__icon,
+.header__info {
+  padding: 1.25rem;
+}
+.header__icon i {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+.header__info {
+  flex-grow: 1;
+}
+
+.info__song {
+  font-weight: bold;
+}
+.info__artist {
+  font-size: 0.75rem;
+}
+
+.lyrics {
+  margin: 2em 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lyrics__container {
+  width: 80%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px;
+  gap: 1.5rem;
+  overflow-x: scroll;
+}
+.lyrics__container::-webkit-scrollbar {
+  display: none;
+}
+
+.song {
+  width: 100%;
+  height: 300px;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(255, 255, 255, 0.2);
+}
+.song__container {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url('image.jpg') no-repeat center/cover;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow: scroll;
+}
+.song__container::-webkit-scrollbar {
+  display: none;
+}
+.song__lyric {
+  margin-bottom: 1rem;
+}
+.song__lyric_en {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.song__lyric_es {
+  color: var(--color-secondary);
+}
+
+.progress {
+  padding: 1rem;
+}
+.progress__values {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  padding: 2px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(255, 255, 255, 0.2);
+}
+.bar__inner {
+  background-color: black;
+  height: 4px;
+  border-radius: 2px;
+  padding: 1px;
+}
+.bar__value {
+  width: 50%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--color-secondary);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: var(--color-secondary);
+}
+.controls__icon {
+  padding: 1rem;
+  margin: 0.25rem;
+  font-size: 1.5rem;
+}
+.controls__play {
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(255, 255, 255, 0.2);
+}
